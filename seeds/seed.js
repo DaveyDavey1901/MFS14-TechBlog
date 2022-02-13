@@ -1,18 +1,15 @@
-const sequelize = require('../config/connection');
-const { User } = require('../models');
+const sequelize = require("../config/connection");
+const seedUser = require("./userData");
+const seedBlog = require("./blogData");
 
-const userData = require('./userData.json');
-
-//force: true adds a DROP TABLE IF EXISTS
-const seedDatabase = async () => {
+const seedAll = async () => {
   await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  await seedUser();
+
+  await seedBlog();
 
   process.exit(0);
 };
 
-seedDatabase();
+seedAll();

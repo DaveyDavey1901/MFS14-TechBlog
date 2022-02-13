@@ -14,12 +14,13 @@ Blog.init(
     title: {
       type: DataTypes.STRING,
       allowNull: false,
+      
     },
     contents: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
-   
+
     userId: {
       type: DataTypes.INTEGER,
       references: {
