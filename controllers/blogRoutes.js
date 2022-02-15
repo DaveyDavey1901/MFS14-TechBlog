@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Blog } = require("../models");
+const { Blog } = require("../models/");
 
 //get all blogs
 router.get("/", async (req, res) => {
@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const blog = (await Blog.findByPk(req.params.id)).get({ plain: true });
-    res.render('singleBlog', { ...blog });
+    res.render('singleblog', { ...blog, });
   } catch (err) {
     res.sendStatus(500).send(err);
   }

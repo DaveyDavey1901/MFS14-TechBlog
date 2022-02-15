@@ -1,35 +1,46 @@
 <html lang="en">
 
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/general.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <title>TECH BLOG</title>
   </head>
 
   <body>
-    <header>
-      <h1>Welcome to my Tech Blog</h1>
+    <header class="header fixed-part flex-align-c">
+      <p class="myname-nav">David Davies</p>
+      <nav>
+        <ul class="header-nav-list flex-align-c">
+          <li>
+            <a class="header-nav-link" href="#" alt="home page link">Home</a>
+          </li>
+          <li>
+            <a class="header-nav-link" href="#" alt="login">Login</a>
+          </li>
+          <li>
+            <a class="header-nav-link" href="#" alt="logout">Logout</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <nav>
-      <a href="/">Home</a>
-      {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">Logout</button>
-      {{else}}
-        <a href="/login">Login</a>
-      {{/if}}
-    </nav>
-    <main>
-      <aside>
-        <h2>Enjoy The Blogs</h2>
-      </aside>
-      <div class="gallery">
-        {{{body}}}
-      </div>
+    <div>
+      <h1 class="heading-primary">TECH BLOG</h1>
+    </div>
+    <main class="container">
+
+      {{{body}}}
     </main>
-    {{#if loggedIn}}
-      <script src="/js/logout.js"></script>
-    {{/if}}
+
   </body>
 
 </html>

@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+:root {
+  --primary: #071b45;
+  --secondary: #ffdd19;
+  --tertiary: #fdf2f2;
+  --error: rgb(228, 46, 1);
+  --border-radius: 0.4rem;
+  --bg-color: rgba(7, 27, 69, 0.9);
+  --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Header Section */
+
+.header {
+  justify-content: space-between;
+  background-color: var(--primary);
+  border-bottom: 1px solid #ffdd19;
+  height: 5.6rem;
+  padding: 0 4.8rem;
+  box-shadow: var(--box-shadow);
+}
+
+/*  Navagation Bar   */
+
+.myname-nav {
+  font-size: 1.6rem;
+  margin-right: 3.8rem;
+}
+
+.header-nav-list {
+  list-style: none;
+  gap: 3.8rem;
+}
+
+.header-nav-link:link,
+.header-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--tertiary);
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  /*Animation slows colour transition*/
+  transition: all 0.5s;
+}
+
+.header-nav-link:hover,
+.header-nav-link:active {
+  color: #a00000;
+}
+
+.container {
+  max-width: 960px;
+  padding: 1rem 4rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Gigs */
+.blogCard {
+  background: var(--bg-color);
+  color: var(--tertiary);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.cardTitle{
+  font-size: 2.2rem;
+  font-weight: 500;
+  color:var(--secondary);
+}

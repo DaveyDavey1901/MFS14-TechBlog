@@ -1,11 +1,19 @@
-<ul>
+<section id="blogs" class="container">
+  <h1>All Blogs</h1>
+
   {{#each blogs}}
-    <li>
-      <a href="/blogs/{{this.id}}">{{this.title}}
+    <div class="blogCard bdr-style-one ">
+      <a  href="/blogs/{{this.id}}">{{this.id}}. {{this.title}}
       </a>
-      <div>
-        {{this.contents}}
-      </div>
-    </li>
+     
+      <p>{{this.contents}}</p>
+       <div>posted by:
+    </div>
+         </div>
+
+  {{else}}
+    <p>No blogs available</p>
+
   {{/each}}
-</ul>
+
+</section>
