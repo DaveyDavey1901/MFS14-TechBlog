@@ -26,7 +26,10 @@ router.get("/:id", async (req, res) => {
 //add a blog
 router.post("/", async (req, res) => {
   try {
-    const newBlog = await Blog.create(req.body);
+    const newBlog = await Blog.create({
+      title: req.body.title,
+      contents: req.body.contents,
+    });
     res.json(newBlog);
   } catch (err) {
     res.sendStatus(500).send(err);
