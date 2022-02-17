@@ -1,9 +1,10 @@
+{{>newBlogBtn}}
 <section id="blogs" class="container">
   <h1>All Blogs</h1>
 
   {{#each blogs}}
     <div class="blogCard bdr-style-one ">
-      <a  href="/blogs/{{this.id}}">{{this.id}}. {{this.title}}
+      <a  class="blogTitle" href="/blogs/{{this.id}}">{{this.id}}. {{this.title}}
       </a>
      
       <p>{{this.contents}}</p>
