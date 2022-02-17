@@ -51,23 +51,69 @@
 }
 
 .container {
-  max-width: 960px;
+  max-width: 96rem;
   padding: 1rem 4rem;
   margin: auto;
   overflow: hidden;
 }
 
-/* Gigs */
+.cardMd{
+  justify-content: center;
+  max-width: 38rem;
+  margin: auto;
+  margin-top: 2rem;
+overflow: hidden;
+  }
+.card {
+  background: var(--bg-color);
+  color: var(--tertiary);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow);
+  text-align: justify;
+}
 .blogCard {
   background: var(--bg-color);
   color: var(--tertiary);
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   box-shadow: var(--box-shadow);
 }
 
+.cardLog {
+  background: var(--bg-color);
+  color: var(--tertiary);
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
 .cardTitle{
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color:var(--secondary);
+  text-align:center;
+  margin-bottom: 1.2rem;
+ 
 }
+
+.blogTitle{
+  font-size: 1.8rem;
+  font-weight: 500;
+  color:var(--secondary);
+  margin-bottom: 1rem;
+ 
+}
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.input-box {
+  padding: 0.5rem;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 1.4rem;
+}
+

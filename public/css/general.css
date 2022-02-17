@@ -83,7 +83,7 @@ ul {
 }
 
 p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
@@ -91,9 +91,11 @@ a {
   font-size: 2.2rem;
   font-weight: 500;
   color:var(--secondary);
-  
 }
 
+button {
+  height: 4rem;
+ }
 /****************************************/
 /*  01 REUSABLE COMPONENTS ALL PAGES 01*/
 /***************************************/
@@ -103,15 +105,16 @@ a {
 .heading-secondary,
 .heading-tertiary {
   font-weight: 700;
-  color: var(--tertiary);
+  color: var(--secondary);
   letter-spacing: 0.1em;
   line-height: 1.2;
   text-align: center;
+  margin: 3rem;
 }
 
 .heading-primary {
   font-size: 5.2rem;
-}
+  }
 
 .heading-secondary {
   font-size: 3.6rem;
@@ -140,8 +143,11 @@ a {
 
   font-family: inherit;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
+  width:40%;
+  text-align: center;
+  
 
   cursor: pointer;
   transition: all 0.3s;
@@ -186,6 +192,7 @@ a {
 }
 .bdr-style-one {
   background-color: #071b45;
+  box-shadow: var(--box-shadow);
 }
 .bdr-style-two {
   background-color: rgba(7, 27, 69, 0.9);
@@ -196,4 +203,13 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.mSm{
+  margin: 2rem;
+  height: 4.2rem;
+}
+
+.btnDash{
+  width:50%;
 }
