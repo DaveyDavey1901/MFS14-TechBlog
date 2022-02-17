@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
+// This route is to check for a valid username and password 
+//if there is one user is logged in.
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
