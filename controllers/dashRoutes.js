@@ -14,10 +14,18 @@ router.get("/new", withAuth, (req, res) => {
   });
 });
 
-router.get("/blogs", withAuth, (req, res) => {
-  res.render("blogsLoggedIn", {
-    layout: "dashboard",
-  });
+
+//get all blogs
+router.get("/blogs",withAuth, async (req, res) => {
+  try {
+    const blogs = (await Blog.findAll({ include: [User] })).map((blog) =>
+      blog.get({ plain: true })
+    );
+    res.render("blogsLoggedIn", { layout: "dashboard", blogs });
+  } catch (err) {
+    res.sendStatus(500).send(err);
+  }
 });
+
 
 module.exports = router;
