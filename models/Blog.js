@@ -14,14 +14,11 @@ Blog.init(
     title: {
       type: DataTypes.STRING,
       allowNull: false,
-      
     },
     contents: {
       type: DataTypes.TEXT,
       allowNull: false,
-      
     },
-
     userId: {
       type: DataTypes.INTEGER,
       references: {
@@ -40,4 +37,3 @@ Blog.init(
 );
 
 module.exports = Blog;
-

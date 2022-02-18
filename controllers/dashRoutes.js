@@ -9,6 +9,7 @@ router.get("/", withAuth, (req, res) => {
   });
 });
 
+//route to reates a new tech blog post
 router.get("/new", withAuth, (req, res) => {
   res.render("newBlog", {
     layout: "dashboard",
@@ -31,5 +32,14 @@ router.get("/blogs",withAuth, async (req, res) => {
   }
 });
 
+//get single
+router.get("/blogs/:id",withAuth, async (req, res) => {
+  try {
+    const blog = (await Blog.findByPk(req.params.id, { include: [User],})).get({ plain: true });
+    res.render("singleblog", { layout: "dashboard", ...blog });
+  } catch (err) {
+    res.sendStatus(500).send(err);
+  }
+});
 
 module.exports = router;
