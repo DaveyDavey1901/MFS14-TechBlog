@@ -16,7 +16,7 @@ async function newFormHandler(event) {
   });
   
   if (response.ok) {
-    document.location.replace("/blogs");
+    document.location.replace("/dashboard/blogs");
   } else {
     alert("Failed to add new tech blog");
   }

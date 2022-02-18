@@ -16,6 +16,11 @@ const blogdata = [
     title: "Javascript brings in the functionality",
     contents: "Now my brain is going to pickle with all the arrays, variables!",
     userId: 3
+  },
+  {
+    title: "Figma a gem to work with",
+    contents: "Figma is more than just a place to throw up a few wireframes. Its a full design tool where you can express your ideas and produce a finished design with prototype before getting into the code. making coding so much easier.",
+    userId: 4
   }
 ]
 

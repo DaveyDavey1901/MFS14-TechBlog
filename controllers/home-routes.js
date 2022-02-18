@@ -21,7 +21,7 @@ router.get("/blogs", async (req, res) => {
 //get single
 router.get("/blogs/:id", async (req, res) => {
   try {
-    const blog = (await Blog.findByPk(req.params.id)).get({ plain: true });
+    const blog = (await Blog.findByPk(req.params.id, { include: [User],})).get({ plain: true });
     res.render("singleblog", { ...blog });
   } catch (err) {
     res.sendStatus(500).send(err);
