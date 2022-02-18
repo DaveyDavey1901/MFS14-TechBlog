@@ -2,17 +2,17 @@ const router = require("express").Router();
 const { User } = require("../../models");
 
 //This route is used to create a new user.
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const newUser = await User.create({
       username: req.body.username,
-      password: req.body.password
+      password: req.body.password,
     });
 
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.username = newUser.username;
-      req.session.logged_in = true;
+      req.session.loggedIn = true;
 
       res.json(newUser);
     });
@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-// This route is to check for a valid username and password 
+// This route is to check for a valid username and password
 //if there is one user is logged in.
 router.post("/login", async (req, res) => {
   try {
@@ -38,21 +38,18 @@ router.post("/login", async (req, res) => {
     const validPassword = userData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: "Incorrect password, please try again" });
+      res.status(400).json({ message: "Incorrect password, please try again" });
       return;
     }
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.userid = userData.id;
       req.session.username = userData.username;
-      req.session.logged_in = true;
+      req.session.loggedIn = true;
 
       res.json({
         user: userData,
-        message: `Welcome ${userData}you are now logged in!`,
-      });
+        message: "Welcome you are now logged in!"});
     });
   } catch (err) {
     res.status(400).json(err);
@@ -61,7 +58,7 @@ router.post("/login", async (req, res) => {
 
 // this route will end the session and log the user out.
 router.post("/logout", (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
     });

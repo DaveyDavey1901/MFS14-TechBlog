@@ -19,6 +19,7 @@ Blog.init(
     contents: {
       type: DataTypes.TEXT,
       allowNull: false,
+      
     },
 
     userId: {
