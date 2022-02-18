@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { Blog, User } = require("../models/");
 
 router.get("/", (req, res) => {
   {
@@ -6,15 +7,24 @@ router.get("/", (req, res) => {
   }
 });
 
-router.get("/new", (req, res) => {
-  {
-    res.render("newBlog");
+router.get("/blogs", async (req, res) => {
+  try {
+    const blogs = (await Blog.findAll({ include: [User],})).map((blog) =>
+      blog.get({ plain: true })
+    );
+     res.render("blogs", { blogs });
+  } catch (err) {
+    res.sendStatus(500).send(err);
   }
 });
 
-router.get("/blogs", (req, res) => {
-  {
-    res.render("blogs");
+//get single
+router.get("/blogs/:id", async (req, res) => {
+  try {
+    const blog = (await Blog.findByPk(req.params.id)).get({ plain: true });
+    res.render("singleblog", { ...blog });
+  } catch (err) {
+    res.sendStatus(500).send(err);
   }
 });
 

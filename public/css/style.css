@@ -126,3 +126,7 @@ label {
   margin-bottom: 1.4rem;
 }
 
+.postedBy{
+  font-size: 1.4rem;
+  color: var(--secondary)
+}
