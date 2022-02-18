@@ -1,0 +1,20 @@
+<section>
+  <div class="blogCard bdr-style-one">
+    <div class="blogTitle">
+      {{this.id}}.
+      {{this.title}}
+    </div>
+    <p>{{contents}}</p>
+    <div class="postedBy">posted by:
+      {{user.username}}
+      on
+    </div>
+    {{!-- <form id="edit-blog" class="">
+      <div class="flex-align-c">
+        <button type="submit" id="update-btn" value="{{this.id}}" class="">Update</button>
+        <button type="submit" id="delete-btn" value="{{this.id}}" class="">Delete</button>
+      </div>
+    </form> --}}
+  </div>
+{{>comments}}
+</section>

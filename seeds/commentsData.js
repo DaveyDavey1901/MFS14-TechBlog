@@ -3,18 +3,18 @@ const { Comment } = require('../models');
 const commentsData = [
     {
         comments: "comment one one one",
-        user_id: 1,
-        blog_id: 1
+        userId: 1,
+        blogId: 1
     },
     {
         comments: "comment two two two",
-        user_id: 2,
-        blog_id: 2
+        userId: 2,
+        blogId: 2
     },
     {
         comments: "comment three three three",
-        user_id: 3,
-        blog_id: 3
+        userId: 3,
+        blogId: 3
     }
 ];
 

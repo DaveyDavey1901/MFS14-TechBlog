@@ -36,7 +36,7 @@ router.get("/blogs",withAuth, async (req, res) => {
 router.get("/blogs/:id",withAuth, async (req, res) => {
   try {
     const blog = (await Blog.findByPk(req.params.id, { include: [User],})).get({ plain: true });
-    res.render("singleblog", { layout: "dashboard", ...blog });
+    res.render("singBlogLoggedIn", { layout: "dashboard", ...blog });
   } catch (err) {
     res.sendStatus(500).send(err);
   }
