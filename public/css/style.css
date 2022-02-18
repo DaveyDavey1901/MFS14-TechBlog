@@ -7,6 +7,7 @@
   --error: rgb(228, 46, 1);
   --border-radius: 0.4rem;
   --bg-color: rgba(7, 27, 69, 0.9);
+  --bg-colorTwo: #063250;
   --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -82,6 +83,14 @@ overflow: hidden;
 
 .cardLog {
   background: var(--bg-color);
+  color: var(--tertiary);
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.cardSignup, .cardlogin {
+  background: var(--bg-colorTwo);
   color: var(--tertiary);
   padding: 1rem;
   box-shadow: var(--box-shadow);

@@ -1,6 +1,25 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
+//This route is used to create a new user.
+router.post('/', async (req, res) => {
+  try {
+    const newUser = await User.create({
+      username: req.body.username,
+      password: req.body.password
+    });
+
+    req.session.save(() => {
+      req.session.userId = newUser.id;
+      req.session.username = newUser.username;
+      req.session.logged_in = true;
+
+      res.json(newUser);
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 // This route is to check for a valid username and password 
 //if there is one user is logged in.
 router.post("/login", async (req, res) => {
@@ -27,6 +46,7 @@ router.post("/login", async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
+      req.session.username = userData.username;
       req.session.logged_in = true;
 
       res.json({
