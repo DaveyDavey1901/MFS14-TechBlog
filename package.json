@@ -2,9 +2,9 @@
   "name": "mfs14-techblog",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node app.js",
     "dev": "nodemon",
     "seed": "node seeds/seed.js"
   },
