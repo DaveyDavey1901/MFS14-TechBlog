@@ -3,9 +3,11 @@ const { Blog, User } = require("../models/");
 
 router.get("/", (req, res) => {
   {
-    res.render("homepage");
+    res.render("main");
   }
 });
+
+
 
 router.get("/blogs", async (req, res) => {
   try {
