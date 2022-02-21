@@ -26,13 +26,10 @@ app.use(session(sess));
 
 // Set Handlebars as the default template engine.
 app.set("view engine", "hbs");
-app.engine(
-  ".hbs",
-  exphbs.engine({
+app.engine(".hbs", exphbs.engine({
     extname: ".hbs",
     defaultLayout: "index",
-    layoutsDir: __dirname + "/views/layouts",
-    partialsDir: __dirname + "/views/partials",
+    
   })
 );
 
