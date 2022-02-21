@@ -19,6 +19,11 @@ Blog.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    datePosted: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
     userId: {
       type: DataTypes.INTEGER,
       references: {
