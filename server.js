@@ -27,21 +27,24 @@ app.use(session(sess));
 
 // Set Handlebars as the default template engine.
 app.set("view engine", "hbs");
-app.engine(".hbs", exphbs.engine({
+app.engine(
+  ".hbs",
+  exphbs.engine({
     extname: ".hbs",
-    defaultLayout: "index",
-    
+    defaultLayout: "main",
+    layoutsDir: __dirname + "/views/layouts",
+    partialsDir: __dirname + "/views/partials",
   })
 );
-app.use('/', routes);
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
+app.use(routes);
 
 
-
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on ${PORT}`));
 });
