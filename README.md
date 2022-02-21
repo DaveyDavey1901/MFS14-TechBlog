@@ -11,7 +11,15 @@
   8. [E-mail](#E-mail)
 ## :small_blue_diamond: Description
 
-In this project we had to produce a tech blog.  The tech blog can be used to record anything new in the web development world hints, tips, reviews, contact links, recommended reads.  anything that could interest another user interested in whats going on and whats out there. 
+In this project we had to produce a tech blog.  The tech blog can be used to record anything new in the web development world hints, tips, reviews, contact links, recommended reads.  anything that could interest another user interested in whats going on and whats out there.
+
+|<img src="public/images/Tech Blog.gif" width="600">| 
+
+
+:file_folder:[Click Here to View the Screencast Video](https://drive.google.com/file/d/1qUPdB3sh2oW9I0AcwCvPmBhia_n4GRi-/view)
+
+
+
 
 ## :small_blue_diamond: Installation
 
@@ -32,6 +40,7 @@ if you would like to add, edit, delete or post a comment to someones post you wi
 1.  Add in the graphics to make each screen stand out more
 2.  After you've logged in add a link to view all the existing posts not just your own on a different page. 
 3.  Add functionality with javascript to allow posts/comments to be edited deleted or commented on.. only routes done at moment.
+
 ## :small_blue_diamond: Contributing People and Resources
 
 David Davies
