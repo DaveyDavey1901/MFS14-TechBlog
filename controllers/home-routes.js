@@ -3,7 +3,7 @@ const { Blog, User } = require("../models/");
 
 router.get("/", (req, res) => {
   {
-    res.render("main");
+    res.render("homepage");
   }
 });
 
