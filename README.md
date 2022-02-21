@@ -32,6 +32,7 @@ if you would like to add, edit, delete or post a comment to someones post you wi
 1.  Add in the graphics to make each screen stand out more
 2.  After you've logged in add a link to view all the existing posts not just your own on a different page. 
 3.  Add functionality with javascript to allow posts/comments to be edited deleted or commented on.. only routes done at moment.
+
 ## :small_blue_diamond: Contributing People and Resources
 
 David Davies
